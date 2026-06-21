@@ -4,5 +4,11 @@
     { "source": "/books.html", "destination": "/learn", "permanent": true },
     { "source": "/community.html", "destination": "/support", "permanent": true },
     { "source": "/chatbot.html", "destination": "/", "permanent": true }
+  ],
+  "rewrites": [
+    { "source": "/learn", "destination": "/learn.html" },
+    { "source": "/quiz", "destination": "/quiz.html" },
+    { "source": "/support", "destination": "/support.html" },
+    { "source": "/index", "destination": "/index.html" }
   ]
 }
