@@ -1,80 +1,38 @@
 <!DOCTYPE html>
 <html lang="so">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>@MFARATOON Support — IsBar AI</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taageero & Community — @MFARATOON | IsBar AI</title>
+  <meta name="description" content="IsBar AI Taageero & Community — Nala soo xiriir, hel taageero, oo ku biir bulshada Soomaaliyeed ee xiisaynaysa AI-ga." />
+  <meta name="keywords" content="IsBar AI, Support, Taageero, Community, WhatsApp, Telegram, Facebook, YouTube, FAQ, Faratoon, MrFaraton" />
+  <meta name="author" content="Mohamed Yasin (Faratoon)" />
+  <link rel="canonical" href="https://isbar-ai.com/support.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Taageero & Community — @MFARATOON | IsBar AI" />
+  <meta property="og:description" content="Nala soo xiriir, hel taageero, oo ku biir bulshada Soomaaliyeed ee xiisaynaysa AI-ga." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/style.css" />
+
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #0f172a;
-      color: #e2e8f0;
-      min-height: 100vh;
-    }
+    /* ════════════════════════════════════════
+       SUPPORT-SPECIFIC STYLES
+       ════════════════════════════════════════ */
 
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 20px 24px 40px;
-    }
-
-    /* Header */
-    .support-header {
-      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-      border-bottom: 3px solid #10b981;
-      padding: 40px 24px;
-      text-align: center;
-    }
-
-    .support-header h1 {
-      font-size: 2.2rem;
-      color: #10b981;
-      margin-bottom: 8px;
-    }
-
-    .support-header h1 span {
-      font-weight: 300;
-      color: #e2e8f0;
-    }
-
-    .support-header p {
-      color: #94a3b8;
-      font-size: 1.05rem;
-    }
-
-    .support-header .response-time {
-      display: inline-block;
-      margin-top: 16px;
-      background: #10b98120;
-      border: 1px solid #10b981;
-      border-radius: 20px;
-      padding: 8px 24px;
-      font-size: 0.9rem;
-      color: #10b981;
-    }
-
-    /* Section Headers */
-    .section-title {
-      font-size: 1.5rem;
-      color: #10b981;
-      margin: 40px 0 20px;
-      padding-bottom: 10px;
-      border-bottom: 2px solid #1e293b;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    /* Contact Form */
+    /* ── Contact Section ── */
     .contact-section {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 40px;
       margin-top: 20px;
     }
-
     @media (max-width: 768px) {
       .contact-section {
         grid-template-columns: 1fr;
@@ -82,152 +40,138 @@
       }
     }
 
-    .contact-form {
-      background: #1e293b;
+    .contact-form-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
       border-radius: 16px;
-      padding: 30px;
-      border: 1px solid #334155;
+      padding: 32px;
     }
-
-    .contact-form .form-group {
+    .contact-form-card .form-group {
       margin-bottom: 18px;
     }
-
-    .contact-form label {
+    .contact-form-card label {
       display: block;
-      font-size: 0.9rem;
-      color: #94a3b8;
+      font-size: 14px;
+      color: #a1a1aa;
       margin-bottom: 6px;
     }
-
-    .contact-form input,
-    .contact-form textarea,
-    .contact-form select {
+    .contact-form-card input,
+    .contact-form-card textarea,
+    .contact-form-card select {
       width: 100%;
       padding: 12px 16px;
       border-radius: 10px;
-      border: 2px solid #334155;
-      background: #0f172a;
-      color: #e2e8f0;
-      font-size: 0.95rem;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.03);
+      color: #e4e4e7;
+      font-size: 15px;
       outline: none;
       transition: border-color 0.2s;
       font-family: inherit;
     }
-
-    .contact-form input:focus,
-    .contact-form textarea:focus,
-    .contact-form select:focus {
+    .contact-form-card input:focus,
+    .contact-form-card textarea:focus,
+    .contact-form-card select:focus {
       border-color: #10b981;
+      box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
     }
-
-    .contact-form textarea {
+    .contact-form-card textarea {
       min-height: 120px;
       resize: vertical;
     }
-
-    .contact-form button {
-      background: #10b981;
-      border: none;
-      color: #0f172a;
-      padding: 14px 32px;
-      border-radius: 30px;
-      cursor: pointer;
-      font-weight: bold;
-      font-size: 1rem;
-      transition: all 0.2s;
+    .contact-form-card button {
       width: 100%;
+      padding: 14px 32px;
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
       font-family: inherit;
     }
-
-    .contact-form button:hover {
-      background: #059669;
+    .contact-form-card button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(16, 185, 129, 0.35);
     }
 
-    /* Direct Contact Info */
+    /* ── Direct Contact Info ── */
     .direct-contact {
-      background: #1e293b;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
       border-radius: 16px;
-      padding: 30px;
-      border: 1px solid #334155;
+      padding: 32px;
     }
-
-    .direct-contact .contact-card {
+    .contact-card {
       display: flex;
       align-items: flex-start;
       gap: 14px;
       padding: 16px 0;
-      border-bottom: 1px solid #334155;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
     }
-
-    .direct-contact .contact-card:last-child {
+    .contact-card:last-child {
       border-bottom: none;
     }
-
     .contact-card .icon {
-      font-size: 1.5rem;
+      font-size: 24px;
       min-width: 40px;
       text-align: center;
     }
-
     .contact-card .info h4 {
-      color: #e2e8f0;
-      font-size: 0.95rem;
+      color: #e4e4e7;
+      font-size: 15px;
+      font-weight: 600;
       margin-bottom: 4px;
     }
-
     .contact-card .info p,
     .contact-card .info a {
-      color: #94a3b8;
-      font-size: 0.9rem;
+      color: #a1a1aa;
+      font-size: 14px;
       text-decoration: none;
     }
-
     .contact-card .info a:hover {
       color: #10b981;
     }
 
-    /* Social Links */
-    .social-links {
+    /* ── Social Mini Links ── */
+    .social-mini-links {
       display: flex;
       gap: 12px;
       flex-wrap: wrap;
       margin-top: 20px;
     }
-
-    .social-link {
-      display: flex;
+    .social-mini-link {
+      display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: #0f172a;
-      border: 1px solid #334155;
-      color: #94a3b8;
       padding: 10px 20px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
       border-radius: 30px;
+      color: #a1a1aa;
       text-decoration: none;
-      font-size: 0.9rem;
+      font-size: 14px;
       transition: all 0.2s;
     }
-
-    .social-link:hover {
+    .social-mini-link:hover {
       border-color: #10b981;
       color: #10b981;
-      background: #10b98110;
+      background: rgba(16, 185, 129, 0.06);
     }
 
-    /* FAQ Section */
+    /* ── FAQ Section ── */
     .faq-section {
       margin-top: 10px;
     }
-
     .faq-item {
-      background: #1e293b;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
       border-radius: 12px;
       margin-bottom: 12px;
-      border: 1px solid #334155;
       overflow: hidden;
     }
-
     .faq-question {
       padding: 16px 20px;
       cursor: pointer;
@@ -235,310 +179,593 @@
       justify-content: space-between;
       align-items: center;
       font-weight: 600;
-      color: #e2e8f0;
+      color: #e4e4e7;
       transition: background 0.2s;
-      font-size: 0.95rem;
+      font-size: 15px;
     }
-
     .faq-question:hover {
-      background: #33415540;
+      background: rgba(255, 255, 255, 0.03);
     }
-
     .faq-question .arrow {
       color: #10b981;
       transition: transform 0.3s;
-      font-size: 1.1rem;
+      font-size: 14px;
     }
-
     .faq-question.active .arrow {
       transform: rotate(180deg);
     }
-
     .faq-answer {
       padding: 0 20px 16px;
-      color: #94a3b8;
+      color: #a1a1aa;
       line-height: 1.7;
-      font-size: 0.9rem;
+      font-size: 14px;
       display: none;
     }
-
     .faq-answer.show {
       display: block;
-      animation: slideDown 0.3s ease;
+      animation: fadeUp 0.3s ease;
     }
 
-    @keyframes slideDown {
-      from { opacity: 0; max-height: 0; }
-      to { opacity: 1; max-height: 500px; }
+    /* ── Community Platforms Grid ── */
+    .community-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
     }
-
-    /* Back link */
-    .back-link {
-      display: inline-block;
-      margin-top: 30px;
-      color: #10b981;
-      text-decoration: none;
-      font-size: 0.9rem;
-    }
-
-    .back-link:hover {
-      text-decoration: underline;
-    }
-
-    /* Footer */
-    footer {
+    .community-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      padding: 32px 24px;
       text-align: center;
-      padding: 24px;
-      border-top: 1px solid #1e293b;
-      color: #64748b;
-      font-size: 0.8rem;
+      transition: all 0.3s ease;
+    }
+    .community-card:hover {
+      background: rgba(255, 255, 255, 0.04);
+      border-color: rgba(16, 185, 129, 0.2);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    }
+    .community-card .comm-emoji {
+      font-size: 48px;
+      display: block;
+      margin-bottom: 16px;
+    }
+    .community-card h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .community-card p {
+      font-size: 13px;
+      color: #a1a1aa;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .comm-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 24px;
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: #fff;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .comm-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(16, 185, 129, 0.3);
+    }
+    .comm-link.telegram {
+      background: linear-gradient(135deg, #229ED9, #1d7eb3);
+    }
+    .comm-link.telegram:hover {
+      box-shadow: 0 8px 24px rgba(34, 158, 217, 0.3);
+    }
+    .comm-link.facebook {
+      background: linear-gradient(135deg, #1877F2, #1464d4);
+    }
+    .comm-link.facebook:hover {
+      box-shadow: 0 8px 24px rgba(24, 119, 242, 0.3);
+    }
+    .comm-link.youtube {
+      background: linear-gradient(135deg, #FF0000, #cc0000);
+    }
+    .comm-link.youtube:hover {
+      box-shadow: 0 8px 24px rgba(255, 0, 0, 0.3);
+    }
+
+    /* ── Live Sessions ── */
+    .live-section {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.06), rgba(99, 102, 241, 0.04));
+      border: 1px solid rgba(16, 185, 129, 0.1);
+      border-radius: 20px;
+      padding: 48px 40px;
+      text-align: center;
       margin-top: 40px;
     }
-
-    footer a {
+    .live-section h3 {
+      font-size: 26px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .live-section .live-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.25);
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #f87171;
+      margin-bottom: 20px;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    .live-section .live-badge .dot {
+      width: 8px;
+      height: 8px;
+      background: #ef4444;
+      border-radius: 50%;
+      display: inline-block;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+    .live-section .schedule-text {
+      font-size: 18px;
+      color: #d4d4d8;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    .live-section .schedule-time {
+      font-size: 14px;
+      color: #71717a;
+    }
+    .live-section .schedule-time strong {
       color: #10b981;
-      text-decoration: none;
+    }
+    .live-section .timezone-note {
+      font-size: 12px;
+      color: #52525b;
+      margin-top: 12px;
     }
 
-    /* Alert / Toast */
+    /* ── Toast ── */
     .toast {
       position: fixed;
-      bottom: 30px;
+      bottom: 24px;
       left: 50%;
       transform: translateX(-50%);
       background: #10b981;
-      color: #0f172a;
+      color: #fff;
       padding: 14px 28px;
       border-radius: 12px;
-      font-weight: bold;
-      font-size: 0.95rem;
+      font-weight: 600;
+      font-size: 15px;
       box-shadow: 0 8px 30px rgba(16, 185, 129, 0.3);
       display: none;
       z-index: 100;
-      animation: fadeIn 0.3s ease;
+      animation: fadeUp 0.3s ease;
     }
-
     .toast.show {
       display: block;
     }
 
     @media (max-width: 600px) {
-      .support-header h1 { font-size: 1.5rem; }
-      .support-header { padding: 30px 16px; }
-      .container { padding: 16px; }
-      .contact-form, .direct-contact { padding: 20px; }
+      .live-section { padding: 32px 24px; }
+      .contact-form-card, .direct-contact { padding: 24px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="support-header">
-    <h1>@<span>MFARATOON</span> Support</h1>
-    <p>Taageerada rasmiga ah ee IsBar AI — Waxaan halkan ugu jirnaa inaan kuu caawino</p>
-    <div class="response-time">⏱ Jawaab celin: 24 saac gudahood</div>
-  </header>
+  <!-- ════════════════════════════════════ -->
+  <!-- BACKGROUND EFFECTS                  -->
+  <!-- ════════════════════════════════════ -->
+  <div class="bg-grid"></div>
+  <div class="bg-glow"></div>
+  <div class="bg-glow-2"></div>
 
-  <!-- Main Content -->
-  <div class="container">
+  <!-- ════════════════════════════════════ -->
+  <!-- NAVBAR                             -->
+  <!-- ════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">IB</div>
+        <span>IsBar AI</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="learn.html">Learn</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="support.html" class="active nav-cta">Support</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
-    <!-- Contact Section -->
-    <h2 class="section-title">📬 Nala soo xiriir</h2>
-
-    <div class="contact-section">
-      <!-- Contact Form -->
-      <div class="contact-form">
-        <form id="supportForm" onsubmit="handleSubmit(event)">
-          <div class="form-group">
-            <label for="name">Magacaaga *</label>
-            <input type="text" id="name" required placeholder="Magacaaga">
-          </div>
-          <div class="form-group">
-            <label for="email">Email-kaaga *</label>
-            <input type="email" id="email" required placeholder="email@example.com">
-          </div>
-          <div class="form-group">
-            <label for="subject">Mawduuca *</label>
-            <select id="subject" required>
-              <option value="">Dooro mawduuc...</option>
-              <option value="Koorso">Koorso / Diiwaangelin</option>
-              <option value="Buug">Buug / PDF</option>
-              <option value="WhatsApp Bot">WhatsApp Bot</option>
-              <option value="Community">Community</option>
-              <option value="Taageero Farsamo">Taageero Farsamo</option>
-              <option value="Qeexitaan">Qeexitaan / Suggestion</option>
-              <option value="Kale">Kale</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Fariintaada *</label>
-            <textarea id="message" required placeholder="Qor fariintaada halkan..."></textarea>
-          </div>
-          <button type="submit">Dir Fariinta ▶</button>
-        </form>
+  <!-- ════════════════════════════════════ -->
+  <!-- PAGE HEADER                        -->
+  <!-- ════════════════════════════════════ -->
+  <section class="page-header">
+    <div class="container">
+      <span class="section-label">✦ Taageero & Community</span>
+      <h1>Taageero &amp; Community — @MFARATOON</h1>
+      <p>Taageerada rasmiga ah ee IsBar AI iyo bulshada Soomaaliyeed ee xiisaynaysa AI-ga.</p>
+      <div style="margin-top:16px;">
+        <span style="display:inline-flex;align-items:center;gap:8px;padding:6px 16px;background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.2);border-radius:50px;font-size:13px;font-weight:500;color:#34d399;">
+          ⏱ Jawaab celin: 24 saac gudahood
+        </span>
       </div>
+    </div>
+  </section>
 
-      <!-- Direct Contact Info -->
-      <div class="direct-contact">
-        <div class="contact-card">
-          <div class="icon">📧</div>
-          <div class="info">
-            <h4>Email</h4>
-            <a href="mailto:suxufi34@gmail.com">suxufi34@gmail.com</a>
-          </div>
-        </div>
-        <div class="contact-card">
-          <div class="icon">📞</div>
-          <div class="info">
-            <h4>Taleefoon</h4>
-            <p>780-335-8180</p>
-          </div>
-        </div>
-        <div class="contact-card">
-          <div class="icon">📍</div>
-          <div class="info">
-            <h4>Location</h4>
-            <p>Edmonton, Alberta, Canada</p>
-          </div>
-        </div>
-        <div class="contact-card">
-          <div class="icon">🌐</div>
-          <div class="info">
-            <h4>Website</h4>
-            <a href="https://isbar-ai.com" target="_blank">isbar-ai.com</a>
-          </div>
-        </div>
-        <div class="contact-card">
-          <div class="icon">⏱</div>
-          <div class="info">
-            <h4>Jawaab celin</h4>
-            <p>24 saac gudahood — waan ka jawaabeynaa fariintaada</p>
-          </div>
+  <!-- ════════════════════════════════════ -->
+  <!-- CONTACT SECTION                    -->
+  <!-- ════════════════════════════════════ -->
+  <section style="padding-top:0;">
+    <div class="container">
+      <span class="section-label">📬 Nala soo xiriir</span>
+      <h2 class="section-title">Soo dir fariin ama nagu soo xiriir toos</h2>
+
+      <div class="contact-section">
+        <!-- Contact Form -->
+        <div class="contact-form-card">
+          <form id="supportForm" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+              <label for="name">Magacaaga *</label>
+              <input type="text" id="name" required placeholder="Magacaaga">
+            </div>
+            <div class="form-group">
+              <label for="email">Email-kaaga *</label>
+              <input type="email" id="email" required placeholder="email@example.com">
+            </div>
+            <div class="form-group">
+              <label for="subject">Mawduuca *</label>
+              <select id="subject" required>
+                <option value="">Dooro mawduuc...</option>
+                <option value="Koorso">Koorso / Diiwaangelin</option>
+                <option value="Buug">Buug / PDF</option>
+                <option value="WhatsApp Bot">WhatsApp Bot</option>
+                <option value="Community">Community</option>
+                <option value="Taageero Farsamo">Taageero Farsamo</option>
+                <option value="Qeexitaan">Qeexitaan / Suggestion</option>
+                <option value="Kale">Kale</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Fariintaada *</label>
+              <textarea id="message" required placeholder="Qor fariintaada halkan..."></textarea>
+            </div>
+            <button type="submit">Dir Fariinta ▶</button>
+          </form>
         </div>
 
-        <!-- Social Links -->
-        <h4 style="color: #10b981; margin-top: 20px; margin-bottom: 10px;">Nagu soo biir</h4>
-        <div class="social-links">
-          <a href="#" class="social-link">🐦 Twitter/X</a>
-          <a href="#" class="social-link">📱 WhatsApp</a>
-          <a href="#" class="social-link">💬 Telegram</a>
-          <a href="#" class="social-link">📘 Facebook</a>
-          <a href="#" class="social-link">📸 Instagram</a>
-          <a href="#" class="social-link">▶️ YouTube</a>
+        <!-- Direct Contact Info -->
+        <div class="direct-contact">
+          <div class="contact-card">
+            <div class="icon">📧</div>
+            <div class="info">
+              <h4>Email</h4>
+              <a href="mailto:suxufi34@gmail.com">suxufi34@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="icon">📞</div>
+            <div class="info">
+              <h4>Taleefoon</h4>
+              <p>780-335-8180</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="icon">📍</div>
+            <div class="info">
+              <h4>Location</h4>
+              <p>Edmonton, Alberta, Canada</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="icon">🌐</div>
+            <div class="info">
+              <h4>Website</h4>
+              <a href="https://isbar-ai.com" target="_blank">isbar-ai.com</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="icon">⏱</div>
+            <div class="info">
+              <h4>Jawaab celin</h4>
+              <p>24 saac gudahood — waan ka jawaabeynaa fariintaada</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="icon">💼</div>
+            <div class="info">
+              <h4>LinkedIn</h4>
+              <a href="https://www.linkedin.com/in/mfaratoon/" target="_blank">@MFARATOON</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- FAQ Section -->
-    <h2 class="section-title">❓ Su'aalaha inta badan la weydiiyo (FAQ)</h2>
+  <!-- ════════════════════════════════════ -->
+  <!-- COMMUNITY PLATFORMS SECTION        -->
+  <!-- ════════════════════════════════════ -->
+  <section style="background:rgba(255,255,255,0.01);">
+    <div class="container">
+      <span class="section-label">👥 Community</span>
+      <h2 class="section-title">Bulshada IsBar AI — Nagu soo biir!</h2>
+      <p class="section-sub">
+        IsBar AI waxaa laga heli karaa 4 goobood oo kala duwan. Dooro midda
+        kugu habboon oo nagu soo biir!
+      </p>
 
-    <div class="faq-section">
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
-          IsBar AI waa maxay?
-          <span class="arrow">▼</span>
+      <div class="community-grid">
+        <!-- WhatsApp -->
+        <div class="community-card">
+          <span class="comm-emoji">💬</span>
+          <h3>WhatsApp Group</h3>
+          <p>
+            Ku soo biir group-keena WhatsApp-ka. Halkan waxaad ka heli kartaa
+            wada hadal, su'aalo, iyo warbixinno cusub oo AI-ga ah.
+          </p>
+          <a href="https://chat.whatsapp.com/" target="_blank" rel="noopener" class="comm-link">
+            ✦ Ku biir WhatsApp
+          </a>
         </div>
-        <div class="faq-answer">
-          IsBar AI waa mac-had ku takhasusay barista AI-ga (Artificial Intelligence) oo ku qoran luuqadda Soomaaliga. Waxaan ku taaganahay Edmonton, Canada waxaanan bixinaa koorsooyin, quizzes, buugaag, iyo xiriirinta bulshada Soomaaliyeed ee xiisaynaysa AI-ga.
+
+        <!-- Telegram -->
+        <div class="community-card">
+          <span class="comm-emoji">✈️</span>
+          <h3>Telegram — @Farsamada</h3>
+          <p>
+            Nagu soo biir Telegram-ka @Farsamada. Halkan waxaad ka heli kartaa
+            casharo, PDF-yo, iyo warbixinno joogto ah.
+          </p>
+          <a href="https://t.me/Farsamada" target="_blank" rel="noopener" class="comm-link telegram">
+            ✦ Ku biir Telegram
+          </a>
+        </div>
+
+        <!-- Facebook -->
+        <div class="community-card">
+          <span class="comm-emoji">📘</span>
+          <h3>Facebook — soomaalipodcast</h3>
+          <p>
+            Nagu soo biir Facebook-ga (soomaalipodcast). Halkan waxaad ka heli
+            kartaa warbixinno, dood, iyo xiriir bulsho oo joogto ah.
+          </p>
+          <a href="https://www.facebook.com/share/17y9mFX3kU/" target="_blank" rel="noopener" class="comm-link facebook">
+            ✦ Ku biir Facebook
+          </a>
+        </div>
+
+        <!-- YouTube -->
+        <div class="community-card">
+          <span class="comm-emoji">▶️</span>
+          <h3>YouTube — MrFaraton</h3>
+          <p>
+            Nagu soo biir YouTube-ka MrFaraton. Halkan waxaad ka daawan kartaa
+            casharo video ah, tutorials, iyo live sessions.
+          </p>
+          <a href="https://www.youtube.com/@MrFaraton" target="_blank" rel="noopener" class="comm-link youtube">
+            ✦ Ku biir YouTube
+          </a>
         </div>
       </div>
 
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
-          Koorsooyinka IsBar AI ma waa lacag?
-          <span class="arrow">▼</span>
+      <!-- Live Sessions -->
+      <div class="live-section">
+        <div class="live-badge">
+          <span class="dot"></span>
+          LIVE — Kulimo Toos Ah
         </div>
-        <div class="faq-answer">
-          Maya! Dhammaan koorsooyinka iyo adeegyada IsBar AI waa BILAASH. Ujeeddadeenu waa inaan u fududeyno barista AI-ga dadka Soomaaliyeed oo dhan, meel kasta oo ay joogaan.
+        <h3>Kulimada IsBar AI ee Todobaadlaha ah</h3>
+        <p style="color:#a1a1aa;max-width:500px;margin:0 auto 24px;font-size:14px;line-height:1.7;">
+          Waxaan qabannaa kulimo toos ah oo todobaadle ah. Halkan waxaad kaga
+          qayb qaadan kartaa cashar, dood, iyo su'aalo toos ah.
+        </p>
+        <div class="schedule-text">
+          Khamiis &amp; Jimce (Thursday &amp; Friday)
         </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
-          Sideen u bilaabi karaa barista AI-ga?
-          <span class="arrow">▼</span>
+        <div class="schedule-time">
+          <strong>8:00 PM — 11:00 PM</strong> (Mountain Time — Edmonton, Canada)
         </div>
-        <div class="faq-answer">
-          Si aad u bilowdo barista AI-ga, booqo isbar-ai.com oo diiwaan geli. Kadib waxaad heli kartaa koorsooyinka, buugaagta PDF-ka ah, iyo quizzes-ka. Dhammaan waa bilaash oo ku qoran Soomaali! Waxaad kaloo isticmaali kartaa WhatsApp Bot-keena.
+        <div class="timezone-note">
+          ⏰ Waqtiga Soomaaliya: Subaxnimo 5:00 — 8:00 (saacaha xiga)
         </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
-          Waa maxay WhatsApp Bot-ka IsBar AI?
-          <span class="arrow">▼</span>
-        </div>
-        <div class="faq-answer">
-          WhatsApp Bot-ka IsBar AI waa qalab kuu saamaxaya inaad ka barato AI-ga adigoo isticmaalaya WhatsApp. Waa bilaash oo fudud in la isticmaalo. Wuxuu ka jawaabaa su'aalaha ku saabsan AI, wuxuu bixiyaa tusaalooyin, wuxuuna kuu caawiyaa barista AI-ga luuqadda Soomaaliga.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
-          Buugaagta PDF-ga ah sideen u heli karaa?
-          <span class="arrow">▼</span>
-        </div>
-        <div class="faq-answer">
-          Buugaagta PDF-ga ah waxaad ka heli kartaa isbar-ai.com gudaha. Waxaa jira buugaag kala duwan oo ku saabsan AI-ga sida AI Fundamentals, Machine Learning 101, ChatGPT-ga oo Fudud, Data Science for Beginners, iyo kuwa kale oo badan. Dhammaantood waa bilaash oo lala soo dejin karo!
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
-          Sideen kula xiriiri karaa aasaasaha IsBar AI?
-          <span class="arrow">▼</span>
-        </div>
-        <div class="faq-answer">
-          Aasaasaha IsBar AI waa Mohamed Yasin (Faratoon). Waxaad lala xiriiri kartaa email: suxufi34@gmail.com ama taleefoon: 780-335-8180. Wuxuu ku nool yahay Edmonton, Alberta, Canada. Jawaab celinta waxay tahay 24 saac gudahood.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
-          Ma jiraa community ama bulsho aan kula xiriiri karo dadka kale?
-          <span class="arrow">▼</span>
-        </div>
-        <div class="faq-answer">
-          Haa! IsBar AI waxay leedahay community dadka Soomaaliyeed ee xiisaynaysa AI-ga. Halkaas waxaad kula xiriiri kartaa dad kale, weydiin kartaa su'aalo, wadaagi kartaa aqoontaada, kana heli kartaa taageero. Nagu soo biir WhatsApp-ka ama website-ka!
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
-          Sideen u heli karaa taageero farsamo?
-          <span class="arrow">▼</span>
-        </div>
-        <div class="faq-answer">
-          Taageerada farsamada waxaad nagala soo xiriiri kartaa email: suxufi34@gmailama taleefoon: 780-335-8180. Waxaad kaloo isticmaali kartaa foomka xiriirinta ee boggan. Waxaan ka jawaabeynaa 24 saac gudahood. Sidoo kale, waxaad booqan kartaa chatbot-keena isbar-ai.com.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggleFAQ(this)">
-          Ma jiraan shahaadooyin la bixiyo koorsooyinka ka dib?
-          <span class="arrow">▼</span>
-        </div>
-        <div class="faq-answer">
-          Haa, IsBar AI waxay bixisaa shahaadooyin dhammaystirka koorsooyinka ka dib. Shahaadadan waxay caddaynaysaa inaad ku guulaysatay barista AI-ga oo aad u diyaar tahay tallaabooyinka xiga ee mustaqbalkaaga AI-ga.
+        <div style="margin-top:28px;">
+          <a href="https://www.youtube.com/@MrFaraton" target="_blank" rel="noopener" class="btn-primary">
+            ▶️ Daawow YouTube-ka
+          </a>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Back to Chatbot -->
-    <div style="text-align: center; margin-top: 30px;">
-      <a href="chatbot.html" class="back-link">← Ku noqo Chatbot-ka</a>
+  <!-- ════════════════════════════════════ -->
+  <!-- FAQ SECTION                        -->
+  <!-- ════════════════════════════════════ -->
+  <section>
+    <div class="container">
+      <span class="section-label">❓ FAQ</span>
+      <h2 class="section-title">Su'aalaha inta badan la weydiiyo</h2>
+
+      <div class="faq-section">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            IsBar AI waa maxay?
+            <span class="arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+            IsBar AI waa mac-had ku takhasusay barista AI-ga (Artificial Intelligence) oo ku qoran luuqadda Soomaaliga. Waxaan ku taaganahay Edmonton, Canada waxaanana bixinaa koorsooyin, quizzes, buugaag, iyo xiriirinta bulshada Soomaaliyeed ee xiisaynaysa AI-ga.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            Koorsooyinka IsBar AI ma waa lacag?
+            <span class="arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+            Maya! Dhammaan koorsooyinka iyo adeegyada IsBar AI waa BILAASH. Ujeeddadeenu waa inaan u fududeyno barista AI-ga dadka Soomaaliyeed oo dhan, meel kasta oo ay joogaan.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            Sideen u bilaabi karaa barista AI-ga?
+            <span class="arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+            Si aad u bilowdo barista AI-ga, booqo isbar-ai.com oo diiwaan geli. Kadib waxaad heli kartaa koorsooyinka, buugaagta PDF-ka ah, iyo quizzes-ka. Dhammaan waa bilaash oo ku qoran Soomaali! Waxaad kaloo isticmaali kartaa WhatsApp Bot-keena.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            Waa maxay WhatsApp Bot-ka IsBar AI?
+            <span class="arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+            WhatsApp Bot-ka IsBar AI waa qalab kuu saamaxaya inaad ka barato AI-ga adigoo isticmaalaya WhatsApp. Waa bilaash oo fudud in la isticmaalo. Wuxuu ka jawaabaa su'aalaha ku saabsan AI, wuxuu bixiyaa tusaalooyin, wuxuuna kuu caawiyaa barista AI-ga luuqadda Soomaaliga.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            Buugaagta PDF-ga ah sideen u heli karaa?
+            <span class="arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+            Buugaagta PDF-ga ah waxaad ka heli kartaa isbar-ai.com gudaha. Waxaa jira buugaag kala duwan oo ku saabsan AI-ga sida AI Fundamentals, ChatGPT-ga oo Fudud, iyo kuwa kale oo dhawaan soo socda. Dhammaantood waa bilaash oo lala soo dejin karo!
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            Sideen kula xiriiri karaa aasaasaha IsBar AI?
+            <span class="arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+            Aasaasaha IsBar AI waa Mohamed Yasin (Faratoon). Waxaad lala xiriiri kartaa email: suxufi34@gmail.com ama taleefoon: 780-335-8180. Wuxuu ku nool yahay Edmonton, Alberta, Canada. Jawaab celinta waxay tahay 24 saac gudahood.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            Ma jiraa community ama bulsho aan kula xiriiri karo dadka kale?
+            <span class="arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+            Haa! IsBar AI waxay leedahay community dadka Soomaaliyeed ee xiisaynaysa AI-ga. Halkaas waxaad kula xiriiri kartaa dad kale, weydiin kartaa su'aalo, wadaagi kartaa aqoontaada, kana heli kartaa taageero. Nagu soo biir WhatsApp-ka, Telegram-ka @Farsamada, Facebook-ga soomaalipodcast, ama YouTube-ka MrFaraton!
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            Sideen u heli karaa taageero farsamo?
+            <span class="arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+            Taageerada farsamada waxaad nagala soo xiriiri kartaa email: suxufi34@gmail.com ama taleefoon: 780-335-8180. Waxaad kaloo isticmaali kartaa foomka xiriirinta ee boggan. Waxaan ka jawaabeynaa 24 saac gudahood.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            Ma jiraan shahaadooyin la bixiyo koorsooyinka ka dib?
+            <span class="arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+            Haa, IsBar AI waxay bixisaa shahaadooyin dhammaystirka koorsooyinka ka dib. Shahaadadan waxay caddaynaysaa inaad ku guulaysatay barista AI-ga oo aad u diyaar tahay tallaabooyinka xiga ee mustaqbalkaaga AI-ga.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            Waa goorma kulimada tooska ah ee IsBar AI?
+            <span class="arrow">▼</span>
+          </div>
+          <div class="faq-answer">
+            Kulimada tooska ah waxay yihiin Khamiista iyo Jimcaha (Thursday & Friday) saacaha 8:00 PM ilaa 11:00 PM (Mountain Time — Edmonton, Canada). Waqtiga Soomaaliya waa subaxnimo 5:00 ilaa 8:00. Nagu soo biir YouTube-ka MrFaraton si aad uga qayb gasho!
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-  </div>
-
-  <!-- Footer -->
+  <!-- ════════════════════════════════════ -->
+  <!-- FOOTER                             -->
+  <!-- ════════════════════════════════════ -->
   <footer>
-    <p>&copy; 2025 <a href="https://isbar-ai.com">IsBar AI</a> — @MFARATOON. Dhammaan xuquuqaha waa la dhowray.</p>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">IB</div>
+            <span>IsBar AI</span>
+          </a>
+          <p>IsBar AI waa platform-ka AI-ga Soomaaliyeeya. Waxaan ku caawinaa inaad AI ku dhisto, ku xirto, kuna horumarto — luqaddaada hooyo.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Boggaga</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="learn.html">Learn</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="support.html">Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Dheh</h4>
+          <ul>
+            <li><a href="support.html">Community</a></li>
+            <li><a href="support.html">Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Xiriir</h4>
+          <ul>
+            <li><a href="mailto:suxufi34@gmail.com">Email</a></li>
+            <li><a href="https://www.linkedin.com/in/mfaratoon/" target="_blank">LinkedIn</a></li>
+            <li><a href="https://www.fiverr.com/faratoon/" target="_blank">Fiverr</a></li>
+            <li><a href="https://www.facebook.com/share/17y9mFX3kU/" target="_blank">Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 IsBar AI. Dhammaan xuquuqda way xifsanyihiin. Wuxuu ka shaqeeyaa Edmonton, Canada 🇨🇦</p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/mfaratoon/" target="_blank">LinkedIn</a>
+          <a href="https://www.fiverr.com/faratoon/" target="_blank">Fiverr</a>
+          <a href="https://www.facebook.com/share/17y9mFX3kU/" target="_blank">Facebook</a>
+          <a href="mailto:suxufi34@gmail.com">Email</a>
+        </div>
+      </div>
+    </div>
   </footer>
 
-  <!-- Toast -->
+  <!-- ════════════════════════════════════ -->
+  <!-- TOAST                               -->
+  <!-- ════════════════════════════════════ -->
   <div id="toast" class="toast"></div>
 
+  <!-- ════════════════════════════════════ -->
+  <!-- SCRIPTS                             -->
+  <!-- ════════════════════════════════════ -->
+  <script src="assets/script.js"></script>
   <script>
     // Toggle FAQ
     function toggleFAQ(element) {
@@ -562,18 +789,13 @@
     // Form submit
     function handleSubmit(event) {
       event.preventDefault();
-      const form = event.target;
       const name = document.getElementById('name').value;
       const email = document.getElementById('email').value;
       const subject = document.getElementById('subject').value;
       const message = document.getElementById('message').value;
 
-      // Normally this would send an email
-      // For now, show success toast
       showToast('✅ Fariintaada waa la diray! Jawaab ayaa kuu soo socota 24 saac gudahood. Mahadsanid!');
-
-      // Reset form
-      form.reset();
+      document.getElementById('supportForm').reset();
     }
 
     // Toast notification
@@ -586,6 +808,5 @@
       }, 4000);
     }
   </script>
-
 </body>
 </html>

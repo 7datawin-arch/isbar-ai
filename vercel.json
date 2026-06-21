@@ -1,0 +1,8 @@
+{
+  "redirects": [
+    { "source": "/courses.html", "destination": "/learn", "permanent": true },
+    { "source": "/books.html", "destination": "/learn", "permanent": true },
+    { "source": "/community.html", "destination": "/support", "permanent": true },
+    { "source": "/chatbot.html", "destination": "/", "permanent": true }
+  ]
+}
