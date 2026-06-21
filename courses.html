@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Koorsooyinka IsBar AI — AI-ga Baro Tallaabo Tallaabo</title>
+  <meta name="description" content="IsBar AI Koorsooyinka — AI-ga Baro Tallaabo Tallaabo. AI Fundamentals, Machine Learning, ChatGPT Mastery, Python for AI, Data Science. Dhammaan waa bilaash!" />
+  <meta name="keywords" content="IsBar AI, Koorsooyin AI, AI Fundamentals, Machine Learning, ChatGPT, Python, Data Science, Somali" />
+  <meta name="author" content="Mohamed Yasin (Faratoon)" />
+  <link rel="canonical" href="https://isbar-ai.com/courses.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Koorsooyinka IsBar AI — AI-ga Baro Tallaabo Tallaabo" />
+  <meta property="og:description" content="Baro AI-ga luqadda Soomaaliga — Koorsooyin bilaash ah oo ku qoran afkaaga hooyo." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/style.css" />
+
+  <style>
+    /* ════════════════════════════════════════
+       COURSES-SPECIFIC STYLES
+       ════════════════════════════════════════ */
+
+    /* ── Featured Course ── */
+    .featured-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.06), rgba(5, 150, 105, 0.03));
+      border: 1px solid rgba(16, 185, 129, 0.15);
+      border-radius: 20px;
+      padding: 48px;
+      margin-bottom: 60px;
+      transition: all 0.3s ease;
+    }
+    .featured-card:hover {
+      border-color: rgba(16, 185, 129, 0.3);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+    }
+    .featured-visual {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #10b981, #059669, #047857);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .featured-visual::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, transparent 40%, rgba(255,255,255,0.08) 100%);
+    }
+    .featured-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 16px;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #34d399;
+      margin-bottom: 16px;
+    }
+    .featured-card h2 {
+      font-size: clamp(24px, 3vw, 36px);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+    .featured-card p {
+      font-size: 15px;
+      color: #a1a1aa;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    .featured-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .featured-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: #71717a;
+    }
+
+    /* ── Course Grid ── */
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+    .course-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      padding: 28px;
+      transition: all 0.3s ease;
+      cursor: default;
+    }
+    .course-card:hover {
+      background: rgba(255, 255, 255, 0.04);
+      border-color: rgba(16, 185, 129, 0.2);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    }
+    .course-icon {
+      font-size: 40px;
+      margin-bottom: 16px;
+      display: block;
+    }
+    .course-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .course-card p {
+      font-size: 13px;
+      color: #a1a1aa;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    .course-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .course-meta span {
+      font-size: 12px;
+      color: #71717a;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* ── Registration Section ── */
+    .register-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+    .register-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
+      padding: 32px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    .register-card:hover {
+      border-color: rgba(16, 185, 129, 0.2);
+      transform: translateY(-3px);
+    }
+    .register-card .reg-icon {
+      font-size: 48px;
+      margin-bottom: 16px;
+      display: block;
+    }
+    .register-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .register-card p {
+      font-size: 13px;
+      color: #a1a1aa;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    /* ── WhatsApp Bot Highlight ── */
+    .whatsapp-highlight {
+      background: linear-gradient(135deg, rgba(37, 211, 102, 0.06), rgba(16, 185, 129, 0.04));
+      border: 1px solid rgba(37, 211, 102, 0.15);
+      border-radius: 20px;
+      padding: 40px;
+      text-align: center;
+      margin-top: 24px;
+    }
+    .whatsapp-highlight .wa-icon {
+      font-size: 64px;
+      display: block;
+      margin-bottom: 16px;
+    }
+    .whatsapp-highlight h3 {
+      font-size: 24px;
+      font-weight: 800;
+      color: #25d366;
+      margin-bottom: 8px;
+    }
+    .whatsapp-highlight p {
+      font-size: 15px;
+      color: #a1a1aa;
+      max-width: 500px;
+      margin: 0 auto 20px;
+    }
+
+    /* ── Support Info ── */
+    .support-info {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 16px;
+    }
+    .support-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #71717a;
+      font-size: 14px;
+    }
+    .support-item a {
+      color: #10b981;
+      text-decoration: none;
+    }
+    .support-item a:hover {
+      color: #34d399;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .featured-card {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ════════════════════════════════════ -->
+  <!-- BACKGROUND EFFECTS                  -->
+  <!-- ════════════════════════════════════ -->
+  <div class="bg-grid"></div>
+  <div class="bg-glow"></div>
+  <div class="bg-glow-2"></div>
+
+  <!-- ════════════════════════════════════ -->
+  <!-- NAVBAR                             -->
+  <!-- ════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">IB</div>
+        <span>IsBar AI</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html" class="active">Courses</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="chatbot.html">Chatbot</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="community.html">Community</a></li>
+        <li><a href="support.html" class="nav-cta">Support</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ════════════════════════════════════ -->
+  <!-- PAGE HEADER                        -->
+  <!-- ════════════════════════════════════ -->
+  <section class="page-header">
+    <div class="container">
+      <span class="section-label">✦ Koorsooyinka</span>
+      <h1>Koorsooyinka IsBar AI</h1>
+      <p>AI-ga Baro Tallaabo Tallaabo — Dhammaan koorsooyinku waa bilaash oo ku qoran luqadda Soomaaliga.</p>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════ -->
+  <!-- FEATURED COURSE                    -->
+  <!-- ════════════════════════════════════ -->
+  <section style="padding-top:0;">
+    <div class="container">
+      <div class="featured-card">
+        <div>
+          <div class="featured-badge">🔥 Koorsada Ugu Caansan</div>
+          <h2>AI Fundamentals — Bilowga AI-ga</h2>
+          <p>
+            Koorsadan waxaad ku baran doontaa aasaaska AI-ga — waxa uu yahay AI,
+            sidee u shaqeeyaa, iyo sida loo isticmaalo nolosha maalinlaha ah.
+            Waa koorsada ugu muhiimsan ee qof kasta oo doonaya inuu barto AI-ga
+            ay tahay inuu qaato. Waxay ku qoran tahay luqad fudud oo Soomaali ah.
+          </p>
+          <div class="featured-meta">
+            <span>⏱ 6 Maalmood</span>
+            <span>📊 Heerka: Bilow</span>
+            <span>📝 12 Cashar</span>
+            <span>✅ Shahaado</span>
+          </div>
+          <a href="#" class="btn-primary">✦ Diiwaan Gel</a>
+        </div>
+        <div class="featured-visual">🤖</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════ -->
+  <!-- COURSE GRID                        -->
+  <!-- ════════════════════════════════════ -->
+  <section>
+    <div class="container">
+      <span class="section-label">✦ Koorsooyinka</span>
+      <h2 class="section-title">Xulo Koorsada Kuu Habboon</h2>
+      <p class="section-sub">
+        Dhammaan koorsooyinku waa bilaash — waxaad dhammaystirtana waxaad
+        helaysaa shahaado iyo buugaag free ah.
+      </p>
+
+      <div class="courses-grid">
+        <!-- Course 1 -->
+        <div class="course-card">
+          <span class="course-icon">🧠</span>
+          <h3>Machine Learning 101</h3>
+          <p>
+            Baro sida loo dhiso machine learning models — regression,
+            classification, clustering, iyo waxyaabo kale oo xiiso leh.
+          </p>
+          <div class="course-meta">
+            <span>⏱ 8 Maalmood</span>
+            <span class="badge badge-blue">Dhexe</span>
+          </div>
+          <a href="#" class="btn-primary btn-sm">✦ Diiwaan Gel</a>
+        </div>
+
+        <!-- Course 2 -->
+        <div class="course-card">
+          <span class="course-icon">💬</span>
+          <h3>ChatGPT Mastery</h3>
+          <p>
+            Ku baro sida loo isticmaalo ChatGPT si xirfad leh — prompt
+            engineering, automation, iyo ku dhex milanka shaqadaada.
+          </p>
+          <div class="course-meta">
+            <span>⏱ 5 Maalmood</span>
+            <span class="badge badge-emerald">Bilow</span>
+          </div>
+          <a href="#" class="btn-primary btn-sm">✦ Diiwaan Gel</a>
+        </div>
+
+        <!-- Course 3 -->
+        <div class="course-card">
+          <span class="course-icon">🐍</span>
+          <h3>Python for AI</h3>
+          <p>
+            Baro Python-ka si aad u dhiso AI projects — libraries-ka ugu
+            muhiimsan sida TensorFlow, PyTorch, iyo scikit-learn.
+          </p>
+          <div class="course-meta">
+            <span>⏱ 10 Maalmood</span>
+            <span class="badge badge-purple">Sare</span>
+          </div>
+          <a href="#" class="btn-primary btn-sm">✦ Diiwaan Gel</a>
+        </div>
+
+        <!-- Course 4 -->
+        <div class="course-card">
+          <span class="course-icon">📊</span>
+          <h3>Data Science</h3>
+          <p>
+            Ku baro sida loo falanqeeyo xogta, loo sawiro, loona isticmaalo
+            si loo helo go'aamo xog ku salaysan.
+          </p>
+          <div class="course-meta">
+            <span>⏱ 8 Maalmood</span>
+            <span class="badge badge-amber">Dhexe</span>
+          </div>
+          <a href="#" class="btn-primary btn-sm">✦ Diiwaan Gel</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════ -->
+  <!-- REGISTRATION SECTION               -->
+  <!-- ════════════════════════════════════ -->
+  <section style="background:rgba(255,255,255,0.01);">
+    <div class="container">
+      <span class="section-label">✦ Diiwaan Gelidda</span>
+      <h2 class="section-title">Sidee Isku Qori Kartaa?</h2>
+      <p class="section-sub">
+        Diiwaangelinta koorsooyinka IsBar AI waa fudud. Waxaad isku qori
+        kartaa 3 siyood oo kala duwan.
+      </p>
+
+      <div class="register-grid">
+        <div class="register-card">
+          <span class="reg-icon">📋</span>
+          <h3>Google Form</h3>
+          <p>
+            Buuxi foomka Google-ga ah — magacaaga, email-kaaga, iyo koorsada
+            aad dooneyso. Kadib waxaad heli doontaa xiriir iyo agab ku saabsan
+            koorsada.
+          </p>
+          <a href="#" class="btn-secondary btn-sm">Google Form Fur ▶</a>
+        </div>
+
+        <div class="register-card">
+          <span class="reg-icon">📧</span>
+          <h3>Substack</h3>
+          <p>
+            Nagu soo biir Substack-keena — waxaad heli doontaa wargeysyo,
+            cusboonaysiinyo, iyo macluumaad ku saabsan koorsooyinka cusub
+            iyo buugaagta free-ga ah.
+          </p>
+          <a href="#" class="btn-secondary btn-sm">Substack Ku Biir ▶</a>
+        </div>
+
+        <div class="register-card">
+          <span class="reg-icon">💬</span>
+          <h3>WhatsApp</h3>
+          <p>
+            Soo dir fariin WhatsApp-ka rasmiga ah ee IsBar AI. Waxaad heli
+            doontaa tilmaamo ku saabsan sida koorsada loo bilaabo iyo
+            agabka koowaad.
+          </p>
+          <a href="#" class="btn-secondary btn-sm">WhatsApp Dir ▶</a>
+        </div>
+      </div>
+
+      <!-- WhatsApp Bot Highlight -->
+      <div class="whatsapp-highlight">
+        <span class="wa-icon">🤖</span>
+        <h3>WhatsApp Business Bot</h3>
+        <p>
+          Waxaan hadda soo saarnay bot cusub oo WhatsApp Business ah oo
+          bilaash ah! Bot-kan wuxuu kaa caawinayaa inaad ka jawaabto
+          su'aalaha ku saabsan AI-ga, koorsooyinka, iyo waxyaabo kale.
+          Waa fudud oo bilaash.
+        </p>
+        <a href="#" class="btn-primary">✦ La hadal Bot-ka Hadda</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════ -->
+  <!-- SUPPORT                            -->
+  <!-- ════════════════════════════════════ -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>@MFARATOON — Taageero & Xiriir</h2>
+      <p>
+        Haddii aad qabto su'aal ama aad u baahan tahay caawimo, nagu soo
+        xiriir. Jawaab celintu waa 24 saac gudahood.
+      </p>
+      <div class="support-info">
+        <div class="support-item">
+          <span>📧</span>
+          <a href="mailto:suxufi34@gmail.com">suxufi34@gmail.com</a>
+        </div>
+        <div class="support-item">
+          <span>📞</span>
+          <a href="tel:+17803358180">780-335-8180</a>
+        </div>
+        <div class="support-item">
+          <span>📍</span>
+          <span>Edmonton, Alberta, Canada</span>
+        </div>
+        <div class="support-item">
+          <span>🌐</span>
+          <a href="https://isbar-ai.com" target="_blank">isbar-ai.com</a>
+        </div>
+        <div class="support-item">
+          <span>💼</span>
+          <a href="https://www.linkedin.com/in/mfaratoon/" target="_blank">LinkedIn @MFARATOON</a>
+        </div>
+      </div>
+      <div style="margin-top:24px;">
+        <a href="support.html" class="btn-primary">✦ La xiriir IsBar AI</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════ -->
+  <!-- FOOTER                             -->
+  <!-- ════════════════════════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <div class="logo-icon">IB</div>
+            <span>IsBar AI</span>
+          </a>
+          <p>IsBar AI waa platform-ka AI-ga Soomaaliyeeya. Waxaan ku caawinaa inaad AI ku dhisto, ku xirto, kuna horumarto — luqaddaada hooyo.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Boggaga</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="chatbot.html">Chatbot</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Dheh</h4>
+          <ul>
+            <li><a href="books.html">Books</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="index.html#about">Ku Saabsan</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Xiriir</h4>
+          <ul>
+            <li><a href="mailto:suxufi34@gmail.com">suxufi34@gmail.com</a></li>
+            <li><a href="mailto:myasinfaratoon@gmail.com">myasinfaratoon@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/mfaratoon/" target="_blank">LinkedIn</a></li>
+            <li><a href="https://www.fiverr.com/faratoon/" target="_blank">Fiverr</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 IsBar AI. Dhammaan xuquuqda way xifsanyihiin. Wuxuu ka shaqeeyaa Edmonton, Canada 🇨🇦</p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/mfaratoon/" target="_blank">LinkedIn</a>
+          <a href="https://www.fiverr.com/faratoon/" target="_blank">Fiverr</a>
+          <a href="https://www.facebook.com/share/17y9mFX3kU/" target="_blank">Facebook</a>
+          <a href="mailto:suxufi34@gmail.com">Email</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ════════════════════════════════════ -->
+  <!-- SCRIPTS                            -->
+  <!-- ════════════════════════════════════ -->
+  <script src="assets/script.js"></script>
+</body>
+</html>

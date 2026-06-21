@@ -1,0 +1,8 @@
+{
+  "name": "isbar-ai",
+  "version": "1.0.0",
+  "description": "IsBar AI — AI-ga ku baro, ku xir, kuna horumar. Somali AI education platform.",
+  "scripts": {
+    "vercel-build": "echo 'Static site, no build needed'"
+  }
+}
