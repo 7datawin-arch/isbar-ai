@@ -1,233 +1,232 @@
-     1|     1|<!DOCTYPE html>
-     2|     2|<html lang="so">
-     3|     3|<head>
-     4|     4|  <meta charset="UTF-8" />
-     5|     5|  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     6|     6|  <title>IsBar AI — AI-ga ku hadal, ku baro, kuna horumar</title>
-     7|     7|  <meta name="description" content="IsBar AI waa platform-ka AI-ga Soomaaliyeeya. La hadal chatbot-ka DeepSeek AI, baro courses, qaado quiz, kana hel taageero." />
-     8|     8|  <meta name="keywords" content="IsBar AI, Somali AI, DeepSeek, chatbot, Faratoon, Mohamed Yasin" />
-     9|     9|  <meta name="author" content="Mohamed Yasin (Faratoon)" />
-    10|    10|  <link rel="canonical" href="https://isbar-ai.com" />
-    11|    11|
-    12|    12|  <!-- Open Graph -->
-    13|    13|  <meta property="og:title" content="IsBar AI — AI-ga ku hadal, ku baro, kuna horumar" />
-    14|    14|  <meta property="og:description" content="Platform-ka AI-ga Soomaaliyeeya — La hadal chatbot-ka DeepSeek, baro AI-ga afkaaga hooyo." />
-    15|    15|  <meta property="og:url" content="https://isbar-ai.com" />
-    16|    16|  <meta property="og:type" content="website" />
-    17|    17|
-    18|    18|  <!-- Fonts -->
-    19|    19|  <link rel="preconnect" href="https://fonts.googleapis.com" />
-    20|    20|  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    21|    21|  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-    22|    22|
-    23|    23|  <!-- Stylesheet -->
-    24|    24|  <link rel="stylesheet" href="assets/style.css" />
-    25|    25|</head>
-    26|    26|<body>
-    27|    27|
-    28|    28|  <!-- ════════════════════════════════ -->
-    29|    29|  <!-- BACKGROUND EFFECTS              -->
-    30|    30|  <!-- ════════════════════════════════ -->
-    31|    31|  <div class="bg-grid"></div>
-    32|    32|  <div class="bg-glow"></div>
-    33|    33|  <div class="bg-glow-2"></div>
-    34|    34|
-    35|    35|  <!-- ════════════════════════════════ -->
-    36|    36|  <!-- NAVBAR                          -->
-    37|    37|  <!-- ════════════════════════════════ -->
-    38|    38|  <nav class="navbar" id="navbar">
-    39|    39|    <div class="container">
-    40|    40|      <a href="/" class="logo">
-    41|    41|        <div class="logo-icon">IB</div>
-    42|    42|        <span>IsBar AI</span>
-    43|    43|      </a>
-    44|    44|      <ul class="nav-links" id="navLinks">
-    45|    45|        <li><a href="/" class="active">Home</a></li>
-    46|    46|        <li><a href="/learn">Learn</a></li>
-    47|    47|        <li><a href="/quiz">Quiz</a></li>
-    48|    48|        <li><a href="/support" class="nav-cta">Support</a></li>
-    49|    49|      </ul>
-    50|    50|      <button class="hamburger" id="hamburger" aria-label="Menu">
-    51|    51|        <span></span><span></span><span></span>
-    52|    52|      </button>
-    53|    53|    </div>
-    54|    54|  </nav>
-    55|    55|
-    56|    56|  <!-- ════════════════════════════════ -->
-    57|    57|  <!-- CHATBOT HERO — FULL SCREEN     -->
-    58|    58|  <!-- ════════════════════════════════ -->
-    59|    59|  <section class="chatbot-hero" id="home">
-    60|    60|    <div class="container">
-    61|    61|      <div class="chatbot-hero-content">
-    62|    62|        <!-- Title -->
-    63|    63|        <h1 class="chatbot-title">
-    64|    64|          <span class="title-gradient">IsBar AI</span>
-    65|    65|        </h1>
-    66|    66|        <p class="chatbot-subtitle">AI-ga ku hadal, ku baro, kuna horumar</p>
-    67|    67|
-    68|    68|        <!-- Chat Interface -->
-    69|    69|        <div class="chat-container" id="chatContainer">
-    70|    70|          <div class="chat-header">
-    71|    71|            <div class="chat-header-avatar">
-    72|    72|              <span>IB</span>
-    73|    73|              <span class="online-dot"></span>
-    74|    74|            </div>
-    75|    75|            <div class="chat-header-info">
-    76|    76|              <h4>IsBar AI</h4>
-    77|    77|              <p>DeepSeek AI • Online</p>
-    78|    78|            </div>
-    79|    79|          </div>
-    80|    80|
-    81|    81|          <div class="chat-messages" id="chatMessages">
-    82|    82|            <!-- Messages rendered by JavaScript -->
-    83|    83|          </div>
-    84|    84|
-    85|    85|          <!-- Suggestion Buttons -->
-    86|    86|          <div class="chat-suggestions" id="chatSuggestions">
-    87|    87|            <button class="suggestion-btn" data-query="Adeegyada">💡 Adeegyada</button>
-    88|    88|            <button class="suggestion-btn" data-query="Koorsooyinka">📚 Koorsooyinka</button>
-    89|    89|            <button class="suggestion-btn" data-query="Buugaagta">📖 Buugaagta</button>
-    90|    90|            <button class="suggestion-btn" data-query="Community">👥 Community</button>
-    91|    91|          </div>
-    92|    92|
-    93|    93|          <div class="chat-input-bar">
-    94|    94|            <input type="text" id="chatInput" class="chat-input" placeholder="Fariintaada halkan ku qor..." autocomplete="off" />
-    95|    95|            <button id="sendBtn" class="chat-send-btn" aria-label="Send">
-    96|    96|              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    97|    97|                <line x1="22" y1="2" x2="11" y2="13"></line>
-    98|    98|                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-    99|    99|              </svg>
-   100|   100|            </button>
-   101|   101|          </div>
-   102|   102|        </div>
-   103|   103|
-   104|   104|        <p class="powered-by">Powered by DeepSeek AI</p>
-   105|   105|      </div>
-   106|   106|    </div>
-   107|   107|  </section>
-   108|   108|
-   109|   109|  <!-- ════════════════════════════════ -->
-   110|   110|  <!-- QUICK LINKS SECTION            -->
-   111|   111|  <!-- ════════════════════════════════ -->
-   112|   112|  <section id="quick-links">
-   113|   113|    <div class="container">
-   114|   114|      <div class="quick-links-grid">
-   115|   115|        <a href="/learn" class="quick-link-card">
-   116|   116|          <div class="ql-icon">📚</div>
-   117|   117|          <h3>Learn</h3>
-   118|   118|          <p>Baro AI-ga koorsooyin bilaash ah oo Soomaali ah</p>
-   119|   119|          <span class="ql-btn">Baro Dheh →</span>
-   120|   120|        </a>
-   121|   121|        <a href="/quiz" class="quick-link-card">
-   122|   122|          <div class="ql-icon">🧠</div>
-   123|   123|          <h3>Quiz</h3>
-   124|   124|          <p>Imitixaanka aqoontaada AI-ga su'aalo xiiso leh</p>
-   125|   125|          <span class="ql-btn">Qaado Quiz →</span>
-   126|   126|        </a>
-   127|   127|        <a href="/support" class="quick-link-card">
-   128|   128|          <div class="ql-icon">👥</div>
-   129|   129|          <h3>Community</h3>
-   130|   130|          <p>Ku biir bulshada Soomaaliyeed ee xiisaynaysa AI-ga</p>
-   131|   131|          <span class="ql-btn">Ku Biir →</span>
-   132|   132|        </a>
-   133|   133|        <a href="/support" class="quick-link-card">
-   134|   134|          <div class="ql-icon">💬</div>
-   135|   135|          <h3>Support</h3>
-   136|   136|          <p>Caawimo 24/7 ah oo kugu habboon</p>
-   137|   137|          <span class="ql-btn">La Xiriir →</span>
-   138|   138|        </a>
-   139|   139|      </div>
-   140|   140|    </div>
-   141|   141|  </section>
-   142|   142|
-   143|   143|  <!-- ════════════════════════════════ -->
-   144|   144|  <!-- MINI STATS                     -->
-   145|   145|  <!-- ════════════════════════════════ -->
-   146|   146|  <section class="stats-bar" id="stats">
-   147|   147|    <div class="container">
-   148|   148|      <div class="stats-grid">
-   149|   149|        <div class="stat-item">
-   150|   150|          <h3>50+</h3>
-   151|   151|          <p>Projects</p>
-   152|   152|        </div>
-   153|   153|        <div class="stat-divider"></div>
-   154|   154|        <div class="stat-item">
-   155|   155|          <h3>98%</h3>
-   156|   156|          <p>Satisfaction</p>
-   157|   157|        </div>
-   158|   158|        <div class="stat-divider"></div>
-   159|   159|        <div class="stat-item">
-   160|   160|          <h3>500+</h3>
-   161|   161|          <p>Community</p>
-   162|   162|        </div>
-   163|   163|        <div class="stat-divider"></div>
-   164|   164|        <div class="stat-item">
-   165|   165|          <h3>24/7</h3>
-   166|   166|          <p>Support</p>
-   167|   167|        </div>
-   168|   168|      </div>
-   169|   169|    </div>
-   170|   170|  </section>
-   171|   171|
-   172|   172|  <!-- ════════════════════════════════ -->
-   173|   173|  <!-- FOOTER                          -->
-   174|   174|  <!-- ════════════════════════════════ -->
-   175|   175|  <footer>
-   176|   176|    <div class="container">
-   177|   177|      <div class="footer-grid">
-   178|   178|        <div class="footer-brand">
-   179|   179|          <a href="/" class="logo">
-   180|   180|            <div class="logo-icon">IB</div>
-   181|   181|            <span>IsBar AI</span>
-   182|   182|          </a>
-   183|   183|          <p>
-   184|   184|            IsBar AI waa platform-ka AI-ga Soomaaliyeeya. La hadal chatbot-ka DeepSeek AI,
-   185|   185|            baro courses, qaado quiz, kana hel taageero — dhammaan luqaddaada hooyo.
-   186|   186|          </p>
-   187|   187|        </div>
-   188|   188|        <div class="footer-col">
-   189|   189|          <h4>Boggaga</h4>
-   190|   190|          <ul>
-   191|   191|            <li><a href="/">Home</a></li>
-   192|   192|            <li><a href="/learn">Learn</a></li>
-   193|   193|            <li><a href="/quiz">Quiz</a></li>
-   194|   194|            <li><a href="/support">Support</a></li>
-   195|   195|          </ul>
-   196|   196|        </div>
-   197|   197|        <div class="footer-col">
-   198|   198|          <h4>Dheh</h4>
-   199|   199|          <ul>
-   200|   200|            <li><a href="/support">Community</a></li>
-   201|   201|            <li><a href="/support">Support</a></li>
-   202|   202|          </ul>
-   203|   203|        </div>
-   204|   204|        <div class="footer-col">
-   205|   205|          <h4>Xiriir</h4>
-   206|   206|          <ul>
-   207|   207|            <li><a href="mailto:suxufi34@gmail.com">Email</a></li>
-   208|   208|            <li><a href="https://www.linkedin.com/in/mfaratoon/" target="_blank">LinkedIn</a></li>
-   209|   209|            <li><a href="https://www.fiverr.com/faratoon/" target="_blank">Fiverr</a></li>
-   210|   210|            <li><a href="https://www.facebook.com/share/17y9mFX3kU/" target="_blank">Facebook</a></li>
-   211|   211|          </ul>
-   212|   212|        </div>
-   213|   213|      </div>
-   214|   214|      <div class="footer-bottom">
-   215|   215|        <p>&copy; 2026 IsBar AI. Dhammaan xuquuqda way xifsanyihiin. Edmonton, Canada 🇨🇦</p>
-   216|   216|        <div class="social-links">
-   217|   217|          <a href="https://www.linkedin.com/in/mfaratoon/" target="_blank" aria-label="LinkedIn">LinkedIn</a>
-   218|   218|          <a href="https://www.fiverr.com/faratoon/" target="_blank" aria-label="Fiverr">Fiverr</a>
-   219|   219|          <a href="https://www.facebook.com/share/17y9mFX3kU/" target="_blank" aria-label="Facebook">Facebook</a>
-   220|   220|          <a href="mailto:suxufi34@gmail.com" aria-label="Email">Email</a>
-   221|   221|        </div>
-   222|   222|      </div>
-   223|   223|    </div>
-   224|   224|  </footer>
-   225|   225|
-   226|   226|  <!-- ════════════════════════════════ -->
-   227|   227|  <!-- SCRIPTS                         -->
-   228|   228|  <!-- ════════════════════════════════ -->
-   229|   229|  <script src="assets/knowledge.js"></script>
-   230|   230|  <script src="assets/script.js"></script>
-   231|   231|</body>
-   232|   232|</html>
-   233|   233|
+<!DOCTYPE html>
+<html lang="so">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IsBar AI — AI-ga ku hadal, ku baro, kuna horumar</title>
+  <meta name="description" content="IsBar AI waa platform-ka AI-ga Soomaaliyeeya. La hadal chatbot-ka DeepSeek AI, baro courses, qaado quiz, kana hel taageero." />
+  <meta name="keywords" content="IsBar AI, Somali AI, DeepSeek, chatbot, Faratoon, Mohamed Yasin" />
+  <meta name="author" content="Mohamed Yasin (Faratoon)" />
+  <link rel="canonical" href="https://isbar-ai.com" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="IsBar AI — AI-ga ku hadal, ku baro, kuna horumar" />
+  <meta property="og:description" content="Platform-ka AI-ga Soomaaliyeeya — La hadal chatbot-ka DeepSeek, baro AI-ga afkaaga hooyo." />
+  <meta property="og:url" content="https://isbar-ai.com" />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+  <!-- ════════════════════════════════ -->
+  <!-- BACKGROUND EFFECTS              -->
+  <!-- ════════════════════════════════ -->
+  <div class="bg-grid"></div>
+  <div class="bg-glow"></div>
+  <div class="bg-glow-2"></div>
+
+  <!-- ════════════════════════════════ -->
+  <!-- NAVBAR                          -->
+  <!-- ════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="/" class="logo">
+        <div class="logo-icon">IB</div>
+        <span>IsBar AI</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/" class="active">Home</a></li>
+        <li><a href="/learn">Learn</a></li>
+        <li><a href="/quiz">Quiz</a></li>
+        <li><a href="/support" class="nav-cta">Support</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ════════════════════════════════ -->
+  <!-- CHATBOT HERO — FULL SCREEN     -->
+  <!-- ════════════════════════════════ -->
+  <section class="chatbot-hero" id="home">
+    <div class="container">
+      <div class="chatbot-hero-content">
+        <!-- Title -->
+        <h1 class="chatbot-title">
+          <span class="title-gradient">IsBar AI</span>
+        </h1>
+        <p class="chatbot-subtitle">AI-ga ku hadal, ku baro, kuna horumar</p>
+
+        <!-- Chat Interface -->
+        <div class="chat-container" id="chatContainer">
+          <div class="chat-header">
+            <div class="chat-header-avatar">
+              <span>IB</span>
+              <span class="online-dot"></span>
+            </div>
+            <div class="chat-header-info">
+              <h4>IsBar AI</h4>
+              <p>DeepSeek AI • Online</p>
+            </div>
+          </div>
+
+          <div class="chat-messages" id="chatMessages">
+            <!-- Messages rendered by JavaScript -->
+          </div>
+
+          <!-- Suggestion Buttons -->
+          <div class="chat-suggestions" id="chatSuggestions">
+            <button class="suggestion-btn" data-query="Adeegyada">💡 Adeegyada</button>
+            <button class="suggestion-btn" data-query="Koorsooyinka">📚 Koorsooyinka</button>
+            <button class="suggestion-btn" data-query="Buugaagta">📖 Buugaagta</button>
+            <button class="suggestion-btn" data-query="Community">👥 Community</button>
+          </div>
+
+          <div class="chat-input-bar">
+            <input type="text" id="chatInput" class="chat-input" placeholder="Fariintaada halkan ku qor..." autocomplete="off" />
+            <button id="sendBtn" class="chat-send-btn" aria-label="Send">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <p class="powered-by">Powered by DeepSeek AI</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════ -->
+  <!-- QUICK LINKS SECTION            -->
+  <!-- ════════════════════════════════ -->
+  <section id="quick-links">
+    <div class="container">
+      <div class="quick-links-grid">
+        <a href="/learn" class="quick-link-card">
+          <div class="ql-icon">📚</div>
+          <h3>Learn</h3>
+          <p>Baro AI-ga koorsooyin bilaash ah oo Soomaali ah</p>
+          <span class="ql-btn">Baro Dheh →</span>
+        </a>
+        <a href="/quiz" class="quick-link-card">
+          <div class="ql-icon">🧠</div>
+          <h3>Quiz</h3>
+          <p>Imitixaanka aqoontaada AI-ga su'aalo xiiso leh</p>
+          <span class="ql-btn">Qaado Quiz →</span>
+        </a>
+        <a href="/support" class="quick-link-card">
+          <div class="ql-icon">👥</div>
+          <h3>Community</h3>
+          <p>Ku biir bulshada Soomaaliyeed ee xiisaynaysa AI-ga</p>
+          <span class="ql-btn">Ku Biir →</span>
+        </a>
+        <a href="/support" class="quick-link-card">
+          <div class="ql-icon">💬</div>
+          <h3>Support</h3>
+          <p>Caawimo 24/7 ah oo kugu habboon</p>
+          <span class="ql-btn">La Xiriir →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════ -->
+  <!-- MINI STATS                     -->
+  <!-- ════════════════════════════════ -->
+  <section class="stats-bar" id="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <h3>50+</h3>
+          <p>Projects</p>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <h3>98%</h3>
+          <p>Satisfaction</p>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <h3>500+</h3>
+          <p>Community</p>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <h3>24/7</h3>
+          <p>Support</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════ -->
+  <!-- FOOTER                          -->
+  <!-- ════════════════════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <div class="logo-icon">IB</div>
+            <span>IsBar AI</span>
+          </a>
+          <p>
+            IsBar AI waa platform-ka AI-ga Soomaaliyeeya. La hadal chatbot-ka DeepSeek AI,
+            baro courses, qaado quiz, kana hel taageero — dhammaan luqaddaada hooyo.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Boggaga</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/learn">Learn</a></li>
+            <li><a href="/quiz">Quiz</a></li>
+            <li><a href="/support">Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Dheh</h4>
+          <ul>
+            <li><a href="/support">Community</a></li>
+            <li><a href="/support">Support</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Xiriir</h4>
+          <ul>
+            <li><a href="mailto:suxufi34@gmail.com">Email</a></li>
+            <li><a href="https://www.linkedin.com/in/mfaratoon/" target="_blank">LinkedIn</a></li>
+            <li><a href="https://www.fiverr.com/faratoon/" target="_blank">Fiverr</a></li>
+            <li><a href="https://www.facebook.com/share/17y9mFX3kU/" target="_blank">Facebook</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 IsBar AI. Dhammaan xuquuqda way xifsanyihiin. Edmonton, Canada 🇨🇦</p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/mfaratoon/" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+          <a href="https://www.fiverr.com/faratoon/" target="_blank" aria-label="Fiverr">Fiverr</a>
+          <a href="https://www.facebook.com/share/17y9mFX3kU/" target="_blank" aria-label="Facebook">Facebook</a>
+          <a href="mailto:suxufi34@gmail.com" aria-label="Email">Email</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ════════════════════════════════ -->
+  <!-- SCRIPTS                         -->
+  <!-- ════════════════════════════════ -->
+  <script src="assets/knowledge.js"></script>
+  <script src="assets/script.js"></script>
+</body>
+</html>
